@@ -11,7 +11,7 @@ docker build -t rawmind/web-gateway:<version> .
 
 ## Versions
 
-- `0.1` [(Dockerfile)](https://github.com/rawmind0/web-gateway/blob/0.1/Dockerfile)
+- `0.1-1` [(Dockerfile)](https://github.com/rawmind0/web-gateway/blob/0.1-1/Dockerfile)
 
 
 ## Usage
