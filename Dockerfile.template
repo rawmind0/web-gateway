@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if [ -n "$1" ]; then
+	if [ -f "$1" ]; then
+		source $1
+	fi
+fi
+
+DOCKER_FILE=${DOCKER_FILE:-"Dockerfile"}
+DOCKER_FROM=${DOCKER_FROM:-"rawmind/alpine-nginx:1.12.1-5"}
+
+echo "Generating ${DOCKER_FILE} with FROM ${DOCKER_FROM} ..."
+
+cat << EOF > ${DOCKER_FILE}
+FROM ${DOCKER_FROM}
+MAINTAINER Raul Sanchez <rawmind@gmail.com>
+
+ENV SERVICE_VERSION=0.1 \
+    SERVICE_NAME=web-gateway \
+# Add service files
+ADD root /
+EOF
