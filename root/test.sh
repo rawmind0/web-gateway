@@ -11,6 +11,7 @@ function checkError {
 rc=0 
 
 echo "Starting service ${SERVICE_NAME}"
+${SERVICE_HOME}/bin/nginx-config.sh
 ${SERVICE_HOME}/bin/nginx 
 SERVICE_PID=$(cat ${SERVICE_HOME}/run/nginx.pid)
 
