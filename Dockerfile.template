@@ -16,7 +16,8 @@ FROM ${DOCKER_FROM}
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV SERVICE_VERSION=0.1 \
-    SERVICE_NAME=web-gateway \
+    SERVICE_NAME=web-gateway
+    
 # Add service files
 ADD root /
 EOF
