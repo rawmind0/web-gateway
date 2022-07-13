@@ -7,7 +7,7 @@ if [ -n "$1" ]; then
 fi
 
 DOCKER_FILE=${DOCKER_FILE:-"Dockerfile"}
-DOCKER_FROM=${DOCKER_FROM:-"rawmind/alpine-nginx:1.12.1-5"}
+DOCKER_FROM=${DOCKER_FROM:-"rawmind/alpine-nginx:1.23.0-0"}
 
 echo "Generating ${DOCKER_FILE} with FROM ${DOCKER_FROM} ..."
 
